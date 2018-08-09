@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:orientation="vertical">
+	<TextView
+		android:layout_height="wrap_content"
+		android:textAppearance="?android:attr/textAppearanceSmall"
+		android:layout_width="wrap_content"
+		android:padding="10dp"
+		android:text="更新:改了一下界面"
+		/>
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+
+		<TextView
+			android:layout_height="wrap_content"
+			android:textAppearance="?android:attr/textAppearanceSmall"
+			android:layout_width="wrap_content"
+			android:layout_marginLeft="10dp"
+			android:text="目标ip(带端口)"/>
+
+		<EditText
+			android:layout_height="wrap_content"
+			android:layout_width="match_parent"
+			android:layout_marginRight="10dp"
+			android:maxLines="1"
+			android:id="@+id/ip"
+			android:ems="10"/>
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+
+		<TextView
+			android:layout_height="wrap_content"
+			android:textAppearance="?android:attr/textAppearanceSmall"
+			android:layout_width="wrap_content"
+			android:layout_marginLeft="10dp"
+			android:text="缓存大小(kb)"/>
+
+		<EditText
+			android:layout_height="wrap_content"
+			android:layout_width="match_parent"
+			android:layout_marginRight="10dp"
+			android:maxLines="1"
+			android:id="@+id/buff"
+			android:ems="10"/>
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+
+		<TextView
+			android:layout_height="wrap_content"
+			android:textAppearance="?android:attr/textAppearanceSmall"
+			android:layout_width="wrap_content"
+			android:layout_marginLeft="10dp"
+			android:text="线程数量(推荐300)"/>
+
+		<EditText
+			android:layout_height="wrap_content"
+			android:layout_width="match_parent"
+			android:layout_marginRight="10dp"
+			android:maxLines="1"
+			android:id="@+id/thread"
+			android:ems="10"/>
+
+	</LinearLayout>
+
+	<Button
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:id="@+id/button1"
+		android:text="开始攻击"/>
+
+	<TextView
+		android:layout_height="wrap_content"
+		android:textAppearance="?android:attr/textAppearanceSmall"
+		android:layout_width="wrap_content"
+		android:padding="10dp"
+		android:text="由于没设计停止攻击，如果需要停止攻击请手动杀死后台线程"/>
+
+	<LinearLayout
+		android:visibility="gone"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/ll"
+		android:padding="40dp">
+
+		<ProgressBar
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"/>
+
+		<TextView
+			android:id="@+id/killThread"
+			android:layout_height="wrap_content"
+			android:textAppearance="?android:attr/textAppearanceSmall"
+			android:layout_width="wrap_content"
+			android:padding="10dp"
+			android:text="正在攻击，当前已死亡线程:\n0"/>
+
+	</LinearLayout>
+
+</LinearLayout>
+

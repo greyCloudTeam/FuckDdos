@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+		<item name="colorPrimary">@color/md_indigo_700_color_code</item>
+		<item name="colorAccent">@color/md_pink_700_color_code</item>
+		<item name="colorPrimaryDark">@color/md_indigo_800_color_code</item>
+	</style>
+	<style name="Toolbar">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+</resources>
