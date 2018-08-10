@@ -99,7 +99,7 @@
 		android:textAppearance="?android:attr/textAppearanceSmall"
 		android:layout_width="wrap_content"
 		android:padding="10dp"
-		android:text="由于没设计停止攻击，如果需要停止攻击请手动杀死后台线程"/>
+		android:text="注:死亡线程和存活线程的统计会有误差，并且线程数量越大误差就越大，统计仅供参考"/>
 
 	<LinearLayout
 		android:visibility="gone"
