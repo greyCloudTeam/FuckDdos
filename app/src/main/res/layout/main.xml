@@ -9,7 +9,7 @@
 		android:textAppearance="?android:attr/textAppearanceSmall"
 		android:layout_width="wrap_content"
 		android:padding="10dp"
-		android:text="更新:改了一下界面"
+		android:text="作者:菜问先生 出品:灰色云团队 QQ:2970046657\n未经允许，禁止转载！如果你是通过非法途径获得，请立刻删除！禁止出售！"
 		/>
 	<LinearLayout
 		android:layout_width="match_parent"
@@ -74,12 +74,26 @@
 
 	</LinearLayout>
 
-	<Button
-		android:layout_height="wrap_content"
-		android:layout_width="match_parent"
-		android:id="@+id/button1"
-		android:text="开始攻击"/>
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:orientation="horizontal" >
 
+		<Button
+			android:id="@+id/button1"
+			android:layout_width="0dip"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:text="普通攻击" />
+
+		<Button
+			android:id="@+id/button2"
+			android:layout_width="0dip"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:text="停止攻击" />
+
+	</LinearLayout>
 	<TextView
 		android:layout_height="wrap_content"
 		android:textAppearance="?android:attr/textAppearanceSmall"
