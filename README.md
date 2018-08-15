@@ -1,6 +1,6 @@
 FuckDdos
 ======  
-本软件可以让你在android设备上进行压测，目前正在开发，欢迎各位star！ 
+本软件可以让你在android设备上进行压测，目前正在开发，欢迎各位star！   
 ![Image text]https://github.com/greyCloudTeam/FuckDdos/blob/master/20180815-151255.png
 ![Image text]https://github.com/greyCloudTeam/FuckDdos/blob/master/20180815-151325.png
 
