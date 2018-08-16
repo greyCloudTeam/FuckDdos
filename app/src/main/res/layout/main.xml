@@ -9,7 +9,7 @@
 		android:textAppearance="?android:attr/textAppearanceSmall"
 		android:layout_width="wrap_content"
 		android:padding="10dp"
-		android:text="作者:菜问先生 出品:灰色云团队 QQ:2970046657\n未经允许，禁止转载！如果你是通过非法途径获得，请立刻删除！禁止出售！"
+		android:text="作者:菜问先生 出品:灰色云团队 QQ:2970046657\n禁止模仿！如果你是通过非法途径获得，请立刻删除！禁止出售！"
 		/>
 	<LinearLayout
 		android:layout_width="match_parent"
@@ -99,7 +99,7 @@
 		android:textAppearance="?android:attr/textAppearanceSmall"
 		android:layout_width="wrap_content"
 		android:padding="10dp"
-		android:text="注:死亡线程和存活线程的统计会有误差，并且线程数量越大误差就越大，统计仅供参考"/>
+		android:text="注:线程死亡速度越高就说明目标服务器快要死了，生存线程仅做参考"/>
 
 	<LinearLayout
 		android:visibility="gone"
@@ -118,7 +118,7 @@
 			android:textAppearance="?android:attr/textAppearanceSmall"
 			android:layout_width="wrap_content"
 			android:padding="10dp"
-			android:text="正在攻击，当前已死亡线程:\n0"/>
+			android:text="正在攻击，线程死亡速度:0个/s\n存活线程:0"/>
 
 	</LinearLayout>
 
