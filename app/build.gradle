@@ -8,8 +8,8 @@ android {
         applicationId "com.greyCloud.ddos"
         minSdkVersion 14
         targetSdkVersion 21
-        versionCode 3
-        versionName "1.3"
+        versionCode 4
+        versionName "1.4"
     }
     buildTypes {
         release {

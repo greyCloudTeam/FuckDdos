@@ -1,14 +1,16 @@
 package com.greyCloud.ddos;
 
 import android.app.*;
+import android.content.*;
 import android.os.*;
-import android.widget.*;
+import android.support.v7.app.*;
 import android.view.*;
 import android.view.View.*;
-import java.net.*;
-import android.support.v7.app.ActionBarActivity;
+import android.widget.*;
 import java.io.*;
-import java.util.*;
+import java.net.*;
+
+import android.app.AlertDialog;
 public class MainActivity extends ActionBarActivity
 {
 	public static byte[] buffer;
@@ -40,7 +42,13 @@ public class MainActivity extends ActionBarActivity
 	
 		pd1=new ProgressDialog(this);
 				
-				dialog=new AlertDialog.Builder(this).create();
+		dialog=new AlertDialog.Builder(this).setNegativeButton("确定", new DialogInterface.OnClickListener() {
+				@Override
+				public void onClick(DialogInterface dialog, int which) {
+
+					dialog.dismiss();
+				}
+			}).create();
 				btn2.setOnClickListener(new OnClickListener() {
 				@Override
 				public void onClick(View v) {
@@ -115,9 +123,10 @@ public class MainActivity extends ActionBarActivity
 						
 						LinearLayout ll;
 						EditText ip=null;
-						EditText thread;
+						EditText thread=null;
 						EditText buff=null;
 						TextView kill;
+						boolean astop=false;
 						try{
 							ll=(LinearLayout)findViewById(R.id.ll);
 							kill=(TextView)findViewById(R.id.killThread);
@@ -130,6 +139,10 @@ public class MainActivity extends ActionBarActivity
 							dialog.setTitle("错误");
 							dialog.setMessage("初始化失败："+e.getMessage());
 							dialog.show();
+							astop=true;
+						}
+						if(astop){
+							lock=false;
 							return;
 						}
 						String[] temp=ip.getText().toString().split(":");
@@ -138,6 +151,10 @@ public class MainActivity extends ActionBarActivity
 							dialog.setTitle("错误");
 							dialog.setMessage("ip格式错误");
 							dialog.show();
+							astop=true;
+						}
+						if(astop){
+							lock=false;
 							return;
 						}
 						ipS=temp[0];
@@ -148,6 +165,10 @@ public class MainActivity extends ActionBarActivity
 							dialog.setTitle("错误");
 							dialog.setMessage("缓冲大小错误");
 							dialog.show();
+							astop=true;
+						}
+						if(astop){
+							lock=false;
 							return;
 						}
 						port=Integer.parseInt(temp[1]);
@@ -219,7 +240,10 @@ public class MainActivity extends ActionBarActivity
 					class th extends Thread{
 						@Override
 						public void run(){
-							while(stop){
+							while(true){
+								if(!lock){
+									break;
+								}
 								try{
 									Thread.sleep(1000);
 								}catch(Exception e){
@@ -255,13 +279,37 @@ public class MainActivity extends ActionBarActivity
 		switch (item.getItemId())
 		{
 			case R.id.about:
-				AlertDialog dialog=new AlertDialog.Builder(this).create();
-				dialog.setMessage("作者:菜问先生\nQQ:2970046657\n出品:灰色云团队\ngithub:https://github.com/greyCloudTeam/FuckDdos");
+				AlertDialog dialog = new AlertDialog.Builder(this)
+					.setTitle("关于")//设置对话框的标题
+					.setMessage("作者:菜问先生\nQQ:2970046657\n出品:灰色云团队\ngithub:https://github.com/greyCloudTeam/FuckDdos\n灰色云商店:http://app.hsyun.ml/#fuckDdos")//设置对话框的内容
+					//设置对话框的按钮
+					.setNegativeButton("确定", new DialogInterface.OnClickListener() {
+						@Override
+						public void onClick(DialogInterface dialog, int which) {
+							
+							dialog.dismiss();
+						}
+					}).create();
 				dialog.show();
+				
+				//AlertDialog dialog=new AlertDialog.Builder(this).create();
+				//dialog.setTitle("关于");
+				//dialog.setMessage("作者:菜问先生\nQQ:2970046657\n出品:灰色云团队\ngithub:https://github.com/greyCloudTeam/FuckDdos");
+				//dialog.show();
 				return true;
 			case R.id.updata:
-				AlertDialog dialog1=new AlertDialog.Builder(this).create();
-				dialog1.setMessage("1.4更新内容:\n修复了所有bug\n直接强制停止所有线程，方便快捷\n代码优化，更省资源\n总死亡线程数量不再统计，直接统计每秒死多少线程\n点击开始攻击时不再卡死");
+				AlertDialog dialog1=new AlertDialog.Builder(this)
+					.setTitle("关于")//设置对话框的标题
+					.setMessage("1.4更新内容:\n修复了所有bug\n直接强制停止所有线程，方便快捷\n代码优化，更省资源\n总死亡线程数量不再统计，直接统计每秒死多少线程\n点击开始攻击时不再卡死\n\n1.4_fix1修复内容:\n修复了点击开始攻击后出现警告弹窗，然后再次点击开始攻击显示正在攻击，然后再点击停止攻击直接闪退\n改了下代码，应该能缓解存活线程统计有误差\n修复了停止攻击后再点击开始攻击，存活线程不动的bug\n优化了部分ui")
+					//设置对话框的按钮
+					.setNegativeButton("确定", new DialogInterface.OnClickListener() {
+						@Override
+						public void onClick(DialogInterface dialog, int which) {
+
+							dialog.dismiss();
+						}
+					}).create();
+				
 				dialog1.show();
 				return true;
 		}
@@ -289,13 +337,13 @@ class Thread1 extends Thread{
 				dos.flush();
 			}
 		}catch(Exception e) {
-			MainActivity.killN++;
-			MainActivity.h--;
 			//MainActivity.kill.setText("正在攻击，当前已死亡线程:"+MainActivity.killN);
 			///uiHandler.post(runnable1);
 			//System.out.println("线程死亡，重生！"+e.getMessage());
 			//Runnable thread1 = new Thread1(); 
 			}
+			MainActivity.killN++;
+			MainActivity.h--;
 		}
 	}
 }

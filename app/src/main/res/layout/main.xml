@@ -84,14 +84,18 @@
 			android:layout_width="0dip"
 			android:layout_height="wrap_content"
 			android:layout_weight="1"
-			android:text="普通攻击" />
+			android:text="普通攻击" 
+
+			android:theme="@style/AutoButton"/>
 
 		<Button
 			android:id="@+id/button2"
 			android:layout_width="0dip"
 			android:layout_height="wrap_content"
 			android:layout_weight="1"
-			android:text="停止攻击" />
+			android:text="停止攻击" 
+
+			android:theme="@style/AutoButton"/>
 
 	</LinearLayout>
 	<TextView
