@@ -297,7 +297,7 @@
     <color name="md_grey_800_color_code">#424242</color>
     <color name="md_grey_900_color_code">#212121</color>
     <color name="md_black_color_code">#000000</color>
-    <color name="md_white_color_code">#ffffff</color>
+    <color name="md_white_color_code">#FFFFFF</color>
 
 
     <!-- blue_grey -->

@@ -1,15 +1,16 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 21
-    buildToolsVersion "21.1.0"
+    compileSdkVersion 24
+    buildToolsVersion "24.0.0"
 
     defaultConfig {
         applicationId "com.greyCloud.ddos"
-        minSdkVersion 14
-        targetSdkVersion 21
-        versionCode 4
-        versionName "1.4"
+        minSdkVersion 21
+        targetSdkVersion 24
+        versionCode 5
+        versionName "1.5"
+        multiDexEnabled true
     }
     buildTypes {
         release {
@@ -20,6 +21,6 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-	compile 'com.android.support:design:22.2.0'
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:design:24.0.0'
 }
