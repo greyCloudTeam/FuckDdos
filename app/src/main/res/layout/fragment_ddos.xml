@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:background="@color/md_white_color_code"
-    xmlns:tools="http://schemas.android.com/tools">
+    android:background="@color/md_white_color_code">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <TextView
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:layout_width="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:text="目标ip(带端口)"/>
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
         <EditText
-            android:layout_height="wrap_content"
-            android:layout_width="match_parent"
-            android:layout_marginRight="10dp"
-            android:maxLines="1"
             android:id="@+id/ip"
-            android:ems="10"/>
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:ems="10"
+            android:maxLines="1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="目标ip(带端口)"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
 
     </LinearLayout>
 
@@ -120,4 +120,4 @@
             android:text="正在攻击，线程死亡速度:0个/s\n存活线程:0"/>
 
     </LinearLayout>
-</LinearLayout>
+</FrameLayout>
