@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Users\\1\\AndroidStudioProjects\\FuckDdos\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-az-rAZ\\values-az-rAZ.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\1\\.gradle\\caches\\transforms-2\\files-2.1\\0fdd47b168bd1e4b829c3d3d22671066\\appcompat-v7-24.0.0\\res\\values-az-rAZ\\values-az-rAZ.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,153,261,384,483,595,683,790,904,985,1064,1149,1256,1363,1463,1572,1676,1786,1883",
+                        "endColumns": "97,107,122,98,111,87,106,113,80,78,84,106,106,99,108,103,109,96,100",
+                        "endOffsets": "148,256,379,478,590,678,785,899,980,1059,1144,1251,1358,1458,1567,1671,1781,1878,1979"
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -14,6 +14,8 @@ import android.support.v7.app.*;
 import android.view.*;
 
 import android.app.AlertDialog;
+import android.widget.Toast;
+
 public class MainActivity extends ActionBarActivity
 {
 
@@ -109,18 +111,20 @@ public class MainActivity extends ActionBarActivity
 							ClipboardManager cm = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
 							ClipData mClipData = ClipData.newPlainText("Label", "https://github.com/greyCloudTeam/FuckDdos");
 							cm.setPrimaryClip(mClipData);
+							Toast.makeText(MainActivity.this,"已复制",Toast.LENGTH_SHORT).show();
 						}
-					}).setNeutralButton("复制Email地址", new DialogInterface.OnClickListener() {
+					}).setNeutralButton("关闭", new DialogInterface.OnClickListener() {
+						@Override
+						public void onClick(DialogInterface dialogInterface, int i) {
+							dialogInterface.dismiss();
+						}
+					}).setNegativeButton("复制Email地址", new DialogInterface.OnClickListener() {
 						@Override
 						public void onClick(DialogInterface dialogInterface, int i) {
 							ClipboardManager cm = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
 							ClipData mClipData = ClipData.newPlainText("Label", "753707290@qq.com");
 							cm.setPrimaryClip(mClipData);
-						}
-					}).setNegativeButton("关闭", new DialogInterface.OnClickListener() {
-						@Override
-						public void onClick(DialogInterface dialogInterface, int i) {
-							dialogInterface.dismiss();
+							Toast.makeText(MainActivity.this,"已复制",Toast.LENGTH_SHORT).show();
 						}
 					}).create();
 

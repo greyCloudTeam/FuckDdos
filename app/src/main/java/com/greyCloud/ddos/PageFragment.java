@@ -1,11 +1,13 @@
 package com.greyCloud.ddos;
 
 
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Message;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TextInputEditText;
 import android.support.v4.app.Fragment;
@@ -41,7 +43,7 @@ public class PageFragment extends Fragment {
 
     //组件部分
     AlertDialog Warningdialog;//警告的对话框，定义一个环保
-    final ProgressDialog progress = new ProgressDialog(getActivity());
+    ProgressDialog progress;
 
     /*
     ProgressDialog pd;
@@ -77,6 +79,8 @@ public class PageFragment extends Fragment {
                 dialog.dismiss();//就一个按钮，点完没事了
             }
         }).create();
+        //还有进度框
+        progress= new ProgressDialog(getActivity());
 
         //下面开始绑定按钮事件，同时也是本软件的核心部分
         Button btn_start = (Button) getView().findViewById(R.id.btn_start);
@@ -139,52 +143,87 @@ public class PageFragment extends Fragment {
                 progress.setTitle("正在处理");
                 progress.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);//设置对话进度条样式为水平
                 progress.getWindow().setGravity(Gravity.CENTER);//居中
+                progress.setCancelable(false);// 设置是否可以通过点击Back键取消
+                progress.setCanceledOnTouchOutside(false);// 设置在点击Dialog外是否取消Dialog进度条
 
-                FutureTask<Integer> futureTask = new FutureTask<>(new Callable<Integer>() {
-                    @Override
-                    public Integer call() throws Exception {
-                        progress.setProgress(0);//归位
-                        progress.setMessage("正在创建缓存");//设置提示信息
-                        progress.setMax(bufferSize);
-                        progress.show();//调用show方法显示进度条对话框
-                        for(int i=0;i<bufferSize*1024;i++){
-                            for(int a=0;a<1024;a++) {
-                                PageFragment.buffer[i*1024+a] = 123;
-                            }
-                            progress.setProgress(i+1);
+                final Handler handler=new Handler(){
+                    public void handleMessage(Message msg){
+                        switch(msg.what){
+                            case 0:
+                                //thread选择
+                                progress.setMessage("正在释放线程");
+                                progress.setMax(threadNum);
+                                progress.setProgress(0);//归位
+                                progress.show();
+                                return;
+                            case 1:
+                                //buffer选择
+                                progress.setProgress(0);//归位
+                                progress.setMessage("正在创建缓存");//设置提示信息
+                                progress.setMax(bufferSize);
+                                progress.show();//调用show方法显示进度条对话框
+                                return;
+                            case 2:
+                                //加一
+                                progress.setProgress(progress.getProgress()+1);
+                                return;
+                            case 3:
+                                //报错
+                                Warningdialog.setTitle("警告");
+                                Warningdialog.setMessage("释放线程或创建缓存时出错，错误信息："+Thread_info+"\n在保证操作正确的情况下依然报错，请联系作者，Email：753707290@qq.com（24小时内回复）");
+                                Warningdialog.show();
+                                return;
+                            case 4:
+                                //结束
+                                ((LinearLayout) getView().findViewById(R.id.infoLayout)).setVisibility(View.VISIBLE);//把隐藏部分显示出来
+                                isStart=true;
+                                return;
                         }
-                        //填完就轮到我们的线程了
-                        progress.setMessage("正在释放线程");
-                        progress.setMax(threadNum);
-                        progress.setProgress(0);//归位
-                        progress.show();
-                        for(int i=0;i<threadNum;i++){
-                            Thread.sleep(1000);
-                            progress.setProgress(i+1);
-                        }
-                        return 0;
                     }
-                });
-                Thread thread = new Thread(futureTask);
-                thread.start();
-                try {
-                    futureTask.get();
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                } catch (ExecutionException e) {
-                    flag = true;
-                    Thread_info = e.getMessage();
-                }
-                if(flag){
-                    Warningdialog.setTitle("警告");
-                    Warningdialog.setMessage("释放线程或创建缓存时出错，错误信息："+Thread_info+"\n在保证操作正确的情况下依然报错，请联系作者，Email：753707290@qq.com（24小时内回复）");
-                    Warningdialog.show();
-                    return;
-                }
-                //采用上面的方法可以捕获线程内的异常，恰好又符合我们的情境
-                progress.dismiss();
-                ((LinearLayout) getView().findViewById(R.id.infoLayout)).setVisibility(View.VISIBLE);//把隐藏部分显示出来
-                isStart=true;
+                };
+
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        try {
+                            Message message = new Message();
+                            message.what = 1;
+                            handler.sendMessage(message);
+                            buffer = new byte[bufferSize * 1024];
+                            for (int i = 0; i < bufferSize; i++) {
+                                for (int a = 0; a < 1024; a++) {
+                                    PageFragment.buffer[i * 1024 + a] = 123;
+                                }
+                                message = new Message();
+                                message.what = 2;
+                                handler.sendMessage(message);
+                            }
+                            Thread.sleep(500);
+                            //填完就轮到我们的线程了
+                            message = new Message();
+                            message.what = 0;
+                            handler.sendMessage(message);
+                            for (int i = 0; i < threadNum; i++) {
+                                Thread.sleep(1000);
+                                message = new Message();
+                                message.what = 2;
+                                handler.sendMessage(message);
+                            }
+                            message = new Message();
+                            message.what = 4;
+                            handler.sendMessage(message);
+                        }catch(Exception e){
+                            Thread_info = e.getMessage();
+                            e.printStackTrace();
+                            Message message = new Message();
+                            message.what = 3;
+                            handler.sendMessage(message);
+                        }finally{
+                            progress.dismiss();
+                        }
+                    }
+                }).start();
+
                 //至此，这个按钮的使命结束
             }
         });

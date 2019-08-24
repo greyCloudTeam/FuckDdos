@@ -1,0 +1,107 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\1\AndroidStudioProjects\FuckDdos\app\src\main\AndroidManifest.xml:2:1-23:12
+INJECTED from C:\Users\1\AndroidStudioProjects\FuckDdos\app\src\main\AndroidManifest.xml:2:1-23:12
+INJECTED from C:\Users\1\AndroidStudioProjects\FuckDdos\app\src\main\AndroidManifest.xml:2:1-23:12
+INJECTED from C:\Users\1\AndroidStudioProjects\FuckDdos\app\src\main\AndroidManifest.xml:2:1-23:12
+MERGED from [com.android.support:design:24.0.0] C:\Users\1\.gradle\caches\transforms-2\files-2.1\aaf3cceecd0da53ebb1f1787c30c92df\design-24.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:recyclerview-v7:24.0.0] C:\Users\1\.gradle\caches\transforms-2\files-2.1\e5b6dfbdfeb9226b332d7fd4af5a21fa\recyclerview-v7-24.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:appcompat-v7:24.0.0] C:\Users\1\.gradle\caches\transforms-2\files-2.1\0fdd47b168bd1e4b829c3d3d22671066\appcompat-v7-24.0.0\AndroidManifest.xml:17:1-27:12
+MERGED from [com.android.support:animated-vector-drawable:24.0.0] C:\Users\1\.gradle\caches\transforms-2\files-2.1\3d4ef2b3428fd2e00049e59c5ed76295\animated-vector-drawable-24.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:support-vector-drawable:24.0.0] C:\Users\1\.gradle\caches\transforms-2\files-2.1\f3e19271df614570f4aea1a14c7a51cf\support-vector-drawable-24.0.0\AndroidManifest.xml:17:1-25:12
+MERGED from [com.android.support:support-v4:24.0.0] C:\Users\1\.gradle\caches\transforms-2\files-2.1\6604e1fd68c93dfff76c7dcde3436152\support-v4-24.0.0\AndroidManifest.xml:17:1-27:12
+INJECTED from C:\Users\1\AndroidStudioProjects\FuckDdos\app\src\main\AndroidManifest.xml:2:1-23:12
+INJECTED from C:\Users\1\AndroidStudioProjects\FuckDdos\app\src\main\AndroidManifest.xml:2:1-23:12
+INJECTED from C:\Users\1\AndroidStudioProjects\FuckDdos\app\src\main\AndroidManifest.xml:2:1-23:12
+	package
+		ADDED from C:\Users\1\AndroidStudioProjects\FuckDdos\app\src\main\AndroidManifest.xml:4:2-30
+		INJECTED from C:\Users\1\AndroidStudioProjects\FuckDdos\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\1\AndroidStudioProjects\FuckDdos\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\Users\1\AndroidStudioProjects\FuckDdos\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\1\AndroidStudioProjects\FuckDdos\app\src\main\AndroidManifest.xml:2:1-23:12
+		INJECTED from C:\Users\1\AndroidStudioProjects\FuckDdos\app\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from C:\Users\1\AndroidStudioProjects\FuckDdos\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\1\AndroidStudioProjects\FuckDdos\app\src\main\AndroidManifest.xml:2:1-23:12
+		INJECTED from C:\Users\1\AndroidStudioProjects\FuckDdos\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\1\AndroidStudioProjects\FuckDdos\app\src\main\AndroidManifest.xml:3:2-60
+uses-permission#android.permission.INTERNET
+ADDED from C:\Users\1\AndroidStudioProjects\FuckDdos\app\src\main\AndroidManifest.xml:5:2-63
+	android:name
+		ADDED from C:\Users\1\AndroidStudioProjects\FuckDdos\app\src\main\AndroidManifest.xml:5:19-61
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from C:\Users\1\AndroidStudioProjects\FuckDdos\app\src\main\AndroidManifest.xml:6:2-75
+	android:name
+		ADDED from C:\Users\1\AndroidStudioProjects\FuckDdos\app\src\main\AndroidManifest.xml:6:19-73
+uses-permission#android.permission.CHANGE_NETWORK_STATE
+ADDED from C:\Users\1\AndroidStudioProjects\FuckDdos\app\src\main\AndroidManifest.xml:7:2-75
+	android:name
+		ADDED from C:\Users\1\AndroidStudioProjects\FuckDdos\app\src\main\AndroidManifest.xml:7:19-73
+application
+ADDED from C:\Users\1\AndroidStudioProjects\FuckDdos\app\src\main\AndroidManifest.xml:8:2-22:16
+MERGED from [com.android.support:design:24.0.0] C:\Users\1\.gradle\caches\transforms-2\files-2.1\aaf3cceecd0da53ebb1f1787c30c92df\design-24.0.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:design:24.0.0] C:\Users\1\.gradle\caches\transforms-2\files-2.1\aaf3cceecd0da53ebb1f1787c30c92df\design-24.0.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:appcompat-v7:24.0.0] C:\Users\1\.gradle\caches\transforms-2\files-2.1\0fdd47b168bd1e4b829c3d3d22671066\appcompat-v7-24.0.0\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:appcompat-v7:24.0.0] C:\Users\1\.gradle\caches\transforms-2\files-2.1\0fdd47b168bd1e4b829c3d3d22671066\appcompat-v7-24.0.0\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:animated-vector-drawable:24.0.0] C:\Users\1\.gradle\caches\transforms-2\files-2.1\3d4ef2b3428fd2e00049e59c5ed76295\animated-vector-drawable-24.0.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:animated-vector-drawable:24.0.0] C:\Users\1\.gradle\caches\transforms-2\files-2.1\3d4ef2b3428fd2e00049e59c5ed76295\animated-vector-drawable-24.0.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-vector-drawable:24.0.0] C:\Users\1\.gradle\caches\transforms-2\files-2.1\f3e19271df614570f4aea1a14c7a51cf\support-vector-drawable-24.0.0\AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:support-vector-drawable:24.0.0] C:\Users\1\.gradle\caches\transforms-2\files-2.1\f3e19271df614570f4aea1a14c7a51cf\support-vector-drawable-24.0.0\AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:support-v4:24.0.0] C:\Users\1\.gradle\caches\transforms-2\files-2.1\6604e1fd68c93dfff76c7dcde3436152\support-v4-24.0.0\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-v4:24.0.0] C:\Users\1\.gradle\caches\transforms-2\files-2.1\6604e1fd68c93dfff76c7dcde3436152\support-v4-24.0.0\AndroidManifest.xml:25:5-20
+	android:label
+		ADDED from C:\Users\1\AndroidStudioProjects\FuckDdos\app\src\main\AndroidManifest.xml:11:3-35
+	android:resizeableActivity
+		ADDED from C:\Users\1\AndroidStudioProjects\FuckDdos\app\src\main\AndroidManifest.xml:13:3-36
+	android:icon
+		ADDED from C:\Users\1\AndroidStudioProjects\FuckDdos\app\src\main\AndroidManifest.xml:10:3-39
+	android:allowBackup
+		ADDED from C:\Users\1\AndroidStudioProjects\FuckDdos\app\src\main\AndroidManifest.xml:9:3-29
+	android:theme
+		ADDED from C:\Users\1\AndroidStudioProjects\FuckDdos\app\src\main\AndroidManifest.xml:12:3-34
+activity#com.greyCloud.ddos.MainActivity
+ADDED from C:\Users\1\AndroidStudioProjects\FuckDdos\app\src\main\AndroidManifest.xml:14:3-21:14
+	android:label
+		ADDED from C:\Users\1\AndroidStudioProjects\FuckDdos\app\src\main\AndroidManifest.xml:16:4-36
+	android:name
+		ADDED from C:\Users\1\AndroidStudioProjects\FuckDdos\app\src\main\AndroidManifest.xml:15:4-32
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Users\1\AndroidStudioProjects\FuckDdos\app\src\main\AndroidManifest.xml:17:4-20:20
+action#android.intent.action.MAIN
+ADDED from C:\Users\1\AndroidStudioProjects\FuckDdos\app\src\main\AndroidManifest.xml:18:5-56
+	android:name
+		ADDED from C:\Users\1\AndroidStudioProjects\FuckDdos\app\src\main\AndroidManifest.xml:18:13-54
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\1\AndroidStudioProjects\FuckDdos\app\src\main\AndroidManifest.xml:19:5-64
+	android:name
+		ADDED from C:\Users\1\AndroidStudioProjects\FuckDdos\app\src\main\AndroidManifest.xml:19:15-62
+uses-sdk
+INJECTED from C:\Users\1\AndroidStudioProjects\FuckDdos\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\1\AndroidStudioProjects\FuckDdos\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\1\AndroidStudioProjects\FuckDdos\app\src\main\AndroidManifest.xml
+MERGED from [com.android.support:design:24.0.0] C:\Users\1\.gradle\caches\transforms-2\files-2.1\aaf3cceecd0da53ebb1f1787c30c92df\design-24.0.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:design:24.0.0] C:\Users\1\.gradle\caches\transforms-2\files-2.1\aaf3cceecd0da53ebb1f1787c30c92df\design-24.0.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:recyclerview-v7:24.0.0] C:\Users\1\.gradle\caches\transforms-2\files-2.1\e5b6dfbdfeb9226b332d7fd4af5a21fa\recyclerview-v7-24.0.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:recyclerview-v7:24.0.0] C:\Users\1\.gradle\caches\transforms-2\files-2.1\e5b6dfbdfeb9226b332d7fd4af5a21fa\recyclerview-v7-24.0.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:appcompat-v7:24.0.0] C:\Users\1\.gradle\caches\transforms-2\files-2.1\0fdd47b168bd1e4b829c3d3d22671066\appcompat-v7-24.0.0\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:appcompat-v7:24.0.0] C:\Users\1\.gradle\caches\transforms-2\files-2.1\0fdd47b168bd1e4b829c3d3d22671066\appcompat-v7-24.0.0\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:24.0.0] C:\Users\1\.gradle\caches\transforms-2\files-2.1\3d4ef2b3428fd2e00049e59c5ed76295\animated-vector-drawable-24.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:24.0.0] C:\Users\1\.gradle\caches\transforms-2\files-2.1\3d4ef2b3428fd2e00049e59c5ed76295\animated-vector-drawable-24.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:24.0.0] C:\Users\1\.gradle\caches\transforms-2\files-2.1\f3e19271df614570f4aea1a14c7a51cf\support-vector-drawable-24.0.0\AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:support-vector-drawable:24.0.0] C:\Users\1\.gradle\caches\transforms-2\files-2.1\f3e19271df614570f4aea1a14c7a51cf\support-vector-drawable-24.0.0\AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:support-v4:24.0.0] C:\Users\1\.gradle\caches\transforms-2\files-2.1\6604e1fd68c93dfff76c7dcde3436152\support-v4-24.0.0\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:24.0.0] C:\Users\1\.gradle\caches\transforms-2\files-2.1\6604e1fd68c93dfff76c7dcde3436152\support-v4-24.0.0\AndroidManifest.xml:21:5-23:54
+INJECTED from C:\Users\1\AndroidStudioProjects\FuckDdos\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\1\AndroidStudioProjects\FuckDdos\app\src\main\AndroidManifest.xml
+	tools:overrideLibrary
+		ADDED from [com.android.support:appcompat-v7:24.0.0] C:\Users\1\.gradle\caches\transforms-2\files-2.1\0fdd47b168bd1e4b829c3d3d22671066\appcompat-v7-24.0.0\AndroidManifest.xml:23:9-75
+	android:targetSdkVersion
+		INJECTED from C:\Users\1\AndroidStudioProjects\FuckDdos\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\1\AndroidStudioProjects\FuckDdos\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\1\AndroidStudioProjects\FuckDdos\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\1\AndroidStudioProjects\FuckDdos\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\1\AndroidStudioProjects\FuckDdos\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\1\AndroidStudioProjects\FuckDdos\app\src\main\AndroidManifest.xml
