@@ -3,12 +3,78 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/md_white_color_code"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:paddingBottom="8dp">
 
-    <TextView
-        android:id="@+id/textView"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:text="欢迎！"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textSize="28sp" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#686868" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="12dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="使用方法"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="目前只支持普通的ddos模式，后续会将MCDrink整合进来\n在“ip(包括端口)“处填写你要进行压测的服务器ip和端口，格式为ip:端口，比如127.0.0.1:25565\n线程数量处填写对服务器进行攻击的线程的数量，线程数量过少可能不能发挥全部的威力，过多会导致卡死，建议300，根据手机配置高低选择上调或下调\n缓存大小就是单个线程每次对服务器发送的数据包大小，和线程一样，太小会明显降低威力，太大会丧失多线程带来的好处\n点击普通攻击会发起攻击，点击停止攻击会暂停攻击(暂停时需要等待线程全部结束，不能立刻停止)\n当出现圆形进度条和线程统计的时候说明已经发起攻击，推荐在设置里打开状态栏的显示网速，这样可以更直观的看到效果\n存活线程是当前正在对服务器攻击的线程，当服务器连接超时或是断开的时候线程会死亡，死亡后会重新创建线程。如果线程死亡速度太快有可能是目标服务器将你的ip屏蔽(此时只能换网络环境或设备)，或是服务器已经死亡\n大多数服务器死亡只是临时的，也就是过段时间又会好起来" />
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="更多"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="如有bug和更好的提议请及时联系我们，联系方式在右上角的菜单的关于界面\n各位可以点击右上角的菜单来查看此次更新内容和软件信息\n如果你喜欢我们的软件，或是想借鉴我们的源码，请在github上star一下，github地址在菜单的关于界面有\n\n" />
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="本软件开源，禁止出售，禁止抄袭，转载注明作者，制作不易，勿喷。请遵守GPL协议\n本软件只供测试使用，请勿用于非法用途"
+                    android:textColor="@color/md_red_900_color_code" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
 
 </LinearLayout>

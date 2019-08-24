@@ -1,6 +1,9 @@
 package com.greyCloud.ddos;
 
 import android.content.*;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+import android.net.Uri;
 import android.os.*;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -41,7 +44,21 @@ public class MainActivity extends ActionBarActivity
 		viewPager.setAdapter(pagerAdapter);
 		tabLayout.setupWithViewPager(viewPager);
 		*/
-
+		ConnectivityManager con = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+		NetworkInfo activeNetworkInfo = con.getActiveNetworkInfo();
+		if(activeNetworkInfo.getType()==ConnectivityManager.TYPE_MOBILE){
+			AlertDialog dialog1=new AlertDialog.Builder(this)
+					.setTitle("警告")//设置对话框的标题
+					.setMessage("您现在正在使用移动数据，不建议使用本软件。如果使用将会产生高额的流量费用")
+					//设置对话框的按钮
+					.setNegativeButton("确定", new DialogInterface.OnClickListener() {
+						@Override
+						public void onClick(DialogInterface dialog, int which) {
+							dialog.dismiss();
+						}
+					}).create();
+			dialog1.show();
+		}
 		//t=this;
     }
 
@@ -84,14 +101,29 @@ public class MainActivity extends ActionBarActivity
 			case R.id.about:
 				AlertDialog dialog = new AlertDialog.Builder(this)
 					.setTitle("关于")//设置对话框的标题
-					.setMessage("作者:菜问先生\nQQ:2970046657\n出品:灰色云团队\ngithub:https://github.com/greyCloudTeam/FuckDdos\n灰色云商店:http://app.hsyun.ml/#fuckDdos")//设置对话框的内容
+					.setMessage("作者:菜问先生\nQQ:2970046657\n出品:灰色云团队\ngithub:https://github.com/greyCloudTeam/FuckDdos\nEmail:753707290@qq.com(所反馈的bug和建议将在24小时内回复)")//设置对话框的内容
 					//设置对话框的按钮
-					.setNegativeButton("确定", new DialogInterface.OnClickListener() {
+					.setPositiveButton("复制github地址", new DialogInterface.OnClickListener() {
 						@Override
-						public void onClick(DialogInterface dialog, int which) {
-							dialog.dismiss();
+						public void onClick(DialogInterface dialogInterface, int i) {
+							ClipboardManager cm = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
+							ClipData mClipData = ClipData.newPlainText("Label", "https://github.com/greyCloudTeam/FuckDdos");
+							cm.setPrimaryClip(mClipData);
+						}
+					}).setNeutralButton("复制Email地址", new DialogInterface.OnClickListener() {
+						@Override
+						public void onClick(DialogInterface dialogInterface, int i) {
+							ClipboardManager cm = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
+							ClipData mClipData = ClipData.newPlainText("Label", "753707290@qq.com");
+							cm.setPrimaryClip(mClipData);
+						}
+					}).setNegativeButton("关闭", new DialogInterface.OnClickListener() {
+						@Override
+						public void onClick(DialogInterface dialogInterface, int i) {
+							dialogInterface.dismiss();
 						}
 					}).create();
+
 				dialog.show();
 				//AlertDialog dialog=new AlertDialog.Builder(this).create();
 				//dialog.setTitle("关于");
@@ -106,7 +138,6 @@ public class MainActivity extends ActionBarActivity
 					.setNegativeButton("确定", new DialogInterface.OnClickListener() {
 						@Override
 						public void onClick(DialogInterface dialog, int which) {
-
 							dialog.dismiss();
 						}
 					}).create();

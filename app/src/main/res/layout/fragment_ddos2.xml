@@ -45,7 +45,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="2dp"
-                android:text="线程数(推荐300)" />
+                android:text="线程数量(推荐300)" />
 
             <EditText
                 android:id="@+id/info_thread"
