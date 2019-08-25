@@ -3,7 +3,7 @@ FuckDdos
 本软件可以让你在android设备上进行压测，目前正在开发，欢迎各位star！   
 电脑版可以使用另一个项目:https://github.com/q2398003522/GreyDDOS   
 这是作者第一个android作品，难免会有不好的地方，请勿喷！   
-![首页](https://github.com/greyCloudTeam/FuckDdos/blob/master/20180815-151255.png)
+![首页](https://github.com/greyCloudTeam/FuckDdos/blob/master/welcome.png)
 ![正在压测时...](https://github.com/greyCloudTeam/FuckDdos/blob/master/20180815-151325.png)
 
 -------
