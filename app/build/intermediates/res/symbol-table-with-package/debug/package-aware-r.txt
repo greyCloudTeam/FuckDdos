@@ -1015,7 +1015,6 @@ id touch_outside
 id up
 id updata
 id useLogo
-id view
 id view_offset_helper
 id withText
 id wrap_content

@@ -40,12 +40,12 @@
         "source": "C:\\Users\\1\\.gradle\\caches\\transforms-2\\files-2.1\\0fdd47b168bd1e4b829c3d3d22671066\\appcompat-v7-24.0.0\\res\\drawable-xxhdpi-v4\\abc_ic_star_half_black_36dp.png"
     },
     {
-        "merged": "C:\\Users\\1\\AndroidStudioProjects\\FuckDdos\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_ic_menu_share_mtrl_alpha.png.flat",
-        "source": "C:\\Users\\1\\.gradle\\caches\\transforms-2\\files-2.1\\0fdd47b168bd1e4b829c3d3d22671066\\appcompat-v7-24.0.0\\res\\drawable-xxhdpi-v4\\abc_ic_menu_share_mtrl_alpha.png"
-    },
-    {
         "merged": "C:\\Users\\1\\AndroidStudioProjects\\FuckDdos\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_btn_radio_to_on_mtrl_015.png.flat",
         "source": "C:\\Users\\1\\.gradle\\caches\\transforms-2\\files-2.1\\0fdd47b168bd1e4b829c3d3d22671066\\appcompat-v7-24.0.0\\res\\drawable-hdpi-v4\\abc_btn_radio_to_on_mtrl_015.png"
+    },
+    {
+        "merged": "C:\\Users\\1\\AndroidStudioProjects\\FuckDdos\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_ic_menu_share_mtrl_alpha.png.flat",
+        "source": "C:\\Users\\1\\.gradle\\caches\\transforms-2\\files-2.1\\0fdd47b168bd1e4b829c3d3d22671066\\appcompat-v7-24.0.0\\res\\drawable-xxhdpi-v4\\abc_ic_menu_share_mtrl_alpha.png"
     },
     {
         "merged": "C:\\Users\\1\\AndroidStudioProjects\\FuckDdos\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_ic_ab_back_material.xml.flat",

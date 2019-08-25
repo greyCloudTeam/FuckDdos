@@ -1014,10 +1014,9 @@ int id touch_outside 0x7f070098
 int id up 0x7f070099
 int id updata 0x7f07009a
 int id useLogo 0x7f07009b
-int id view 0x7f07009c
-int id view_offset_helper 0x7f07009d
-int id withText 0x7f07009e
-int id wrap_content 0x7f07009f
+int id view_offset_helper 0x7f07009c
+int id withText 0x7f07009d
+int id wrap_content 0x7f07009e
 int integer abc_config_activityDefaultDur 0x7f080000
 int integer abc_config_activityShortDur 0x7f080001
 int integer bottom_sheet_slide_duration 0x7f080002
