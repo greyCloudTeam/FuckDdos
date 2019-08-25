@@ -16,27 +16,45 @@
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/classAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/r/android/support/design/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/r/android/support/design/R.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/r/android/support/v7/appcompat/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/r/android/support/v7/appcompat/R.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/r/com/greyCloud/ddos/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/r/com/greyCloud/ddos/R.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/debug.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/debug.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/debug.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/debug.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/bundle_manifest/debug/processDebugManifest/bundle-manifest/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/bundle_manifest/debug/processDebugManifest/bundle-manifest/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeProjectDexDebug/out/classes.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeProjectDexDebug/out/classes.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merger.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/EeYiTPydfP7J1ppXx9XT2HirU_Q=" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/EeYiTPydfP7J1ppXx9XT2HirU_Q=" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/instant_app_manifest/debug/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/instant_app_manifest/debug/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_manifests/debug/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_manifests/debug/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/processed_res/debug/processDebugResources/out/resources-debug.ap_" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/processed_res/debug/processDebugResources/out/resources-debug.ap_" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_fragment_ddos.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_fragment_ddos.xml.flat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_fragment_ddos2.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_fragment_ddos2.xml.flat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_fragment_welcome.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_fragment_welcome.xml.flat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/symbol-table-with-package/debug/package-aware-r.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/symbol-table-with-package/debug/package-aware-r.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/android/support/design/R$id.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/android/support/design/R$id.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/android/support/v7/appcompat/R$id.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/android/support/v7/appcompat/R$id.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/greyCloud/ddos/MainActivity$1.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/greyCloud/ddos/MainActivity$1.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/greyCloud/ddos/MainActivity$2.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/greyCloud/ddos/MainActivity$2.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/greyCloud/ddos/MainActivity$3.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/greyCloud/ddos/MainActivity$3.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/greyCloud/ddos/MainActivity$4.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/greyCloud/ddos/MainActivity$4.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/greyCloud/ddos/MainActivity$ContentPagerAdapter.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/greyCloud/ddos/MainActivity$ContentPagerAdapter.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/greyCloud/ddos/MainActivity.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/greyCloud/ddos/MainActivity.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/greyCloud/ddos/PageFragment$1.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/greyCloud/ddos/PageFragment$1.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/greyCloud/ddos/PageFragment$2.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/greyCloud/ddos/PageFragment$2.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/greyCloud/ddos/PageFragment$3$1.dex" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/greyCloud/ddos/PageFragment$3.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/greyCloud/ddos/PageFragment$3.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/greyCloud/ddos/PageFragment.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/greyCloud/ddos/PageFragment.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/greyCloud/ddos/R$id.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/greyCloud/ddos/R$id.dex" afterDir="false" />
@@ -46,13 +64,15 @@
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/greyCloud/ddos/R$string.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/greyCloud/ddos/R$string.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/greyCloud/ddos/R$style.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/greyCloud/ddos/R$style.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/greyCloud/ddos/R$styleable.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/greyCloud/ddos/R$styleable.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/greyCloud/ddos/Thread1.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/greyCloud/ddos/SimpleFragmentPagerAdapter.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/greyCloud/ddos/ddos.dex" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/outputs/apk/debug/app-debug.apk" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/outputs/apk/debug/app-debug.apk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/greyCloud/ddos/PageFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/greyCloud/ddos/fragment_ddos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/greyCloud/ddos/SimpleFragmentPagerAdapter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/greyCloud/ddos/ddos.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/greyCloud/ddos/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/greyCloud/ddos/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/greyCloud/ddos/fragment_ddos.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/greyCloud/ddos/PageFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_ddos.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_ddos.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_ddos2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_ddos2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_welcome.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_welcome.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/color.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/color.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -79,98 +99,78 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/greyCloud/ddos/fragment_ddos.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/greyCloud/ddos/PageFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1388">
-              <caret line="291" column="38" selection-start-line="291" selection-start-column="38" selection-end-line="291" selection-end-column="38" />
+            <state relative-caret-position="228">
+              <caret line="371" column="53" selection-start-line="371" selection-start-column="53" selection-end-line="371" selection-end-column="53" />
               <folding>
-                <element signature="e#3025#3326#0" expanded="true" />
-                <element signature="e#3325#3326#0" expanded="true" />
-                <element signature="e#8153#10408#0" expanded="true" />
-                <element signature="e#10407#10408#0" expanded="true" />
-                <element signature="e#12981#14038#0" expanded="true" />
-                <element signature="e#14037#14038#0" expanded="true" />
-                <element signature="e#14702#15553#0" expanded="true" />
-                <element signature="e#15552#15553#0" expanded="true" />
+                <element signature="e#2102#2103#0" expanded="true" />
+                <element signature="e#2152#2153#0" expanded="true" />
+                <element signature="e#2092#2293#0" expanded="true" />
+                <element signature="e#2292#2293#0" expanded="true" />
+                <element signature="e#2745#3046#0" expanded="true" />
+                <element signature="e#3045#3046#0" expanded="true" />
+                <element signature="e#3269#4438#0" expanded="true" />
+                <element signature="e#4437#4438#0" expanded="true" />
+                <element signature="e#6328#8112#0" expanded="true" />
+                <element signature="e#8111#8112#0" expanded="true" />
+                <element signature="e#8061#10316#0" expanded="true" />
+                <element signature="e#10315#10316#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-24/java/io/OutputStream.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="81" selection-start-line="81" selection-end-line="81" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/greyCloud/ddos/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="126" column="94" selection-start-line="126" selection-start-column="94" selection-end-line="126" selection-end-column="94" />
+            <state relative-caret-position="177">
+              <caret line="167" column="49" selection-start-line="167" selection-start-column="49" selection-end-line="167" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3580#3928#0" expanded="true" />
-                <element signature="e#3927#3928#0" expanded="true" />
-                <element signature="e#3786#4134#0" expanded="true" />
-                <element signature="e#4133#4134#0" expanded="true" />
+                <element signature="e#5383#5541#0" expanded="true" />
+                <element signature="e#5540#5541#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/build/outputs/apk/debug/app-debug.apk">
+          <provider selected="true" editor-type-id="apk-viewer" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_ddos.xml">
+          <provider editor-type-id="android-designer2" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="7" column="15" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
+            <state relative-caret-position="95">
+              <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
             </state>
           </provider>
-          <provider editor-type-id="android-designer2" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_ddos2.xml">
+          <provider selected="true" editor-type-id="android-designer2" />
           <provider editor-type-id="text-editor" />
-          <provider selected="true" editor-type-id="android-designer2" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_welcome.xml">
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="17" column="40" lean-forward="true" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
-            </state>
-          </provider>
-          <provider selected="true" editor-type-id="android-designer2" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/LICENSE">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-798">
-              <caret line="9" column="27" lean-forward="true" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/app/build/reports/lint-results-release-fatal.html">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="431">
-              <caret line="29" column="38" selection-start-line="29" selection-start-column="38" selection-end-line="29" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="12" column="55" selection-start-line="12" selection-start-column="55" selection-end-line="12" selection-end-column="55" />
+            <state relative-caret-position="304">
+              <caret line="28" column="56" selection-start-line="28" selection-start-column="56" selection-end-line="28" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -178,8 +178,18 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="13" column="5" lean-forward="true" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+            <state relative-caret-position="418">
+              <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_welcome.xml">
+          <provider selected="true" editor-type-id="android-designer2" />
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="17" column="40" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -218,7 +228,6 @@
       <list>
         <option value="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" />
         <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_page.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/greyCloud/ddos/BlankFragment.java" />
@@ -227,12 +236,14 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/greyCloud/ddos/SimpleFragmentPagerAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/greyCloud/ddos/fragment_welcome.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_ddos.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/greyCloud/ddos/MainActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_ddos2.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/greyCloud/ddos/PageFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/greyCloud/ddos/fragment_ddos.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_welcome.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_ddos.xml" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/greyCloud/ddos/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/greyCloud/ddos/PageFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_ddos2.xml" />
+        <option value="$PROJECT_DIR$/app/build.gradle" />
       </list>
     </option>
   </component>
@@ -251,7 +262,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -263,6 +273,43 @@
               <item name="FuckDdos" type="b2602c69:ProjectViewProjectNode" />
               <item name="FuckDdos" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="FuckDdos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FuckDdos" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FuckDdos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FuckDdos" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="outputs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FuckDdos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FuckDdos" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="outputs" type="462c0819:PsiDirectoryNode" />
+              <item name="apk" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FuckDdos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FuckDdos" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="outputs" type="462c0819:PsiDirectoryNode" />
+              <item name="apk" type="462c0819:PsiDirectoryNode" />
+              <item name="debug" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FuckDdos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FuckDdos" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="reports" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="FuckDdos" type="b2602c69:ProjectViewProjectNode" />
@@ -334,11 +381,12 @@
         </subPane>
       </pane>
       <pane id="AndroidView" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="ExportApk.ApkPath" value="C:\Users\1\AndroidStudioProjects\FuckDdos\app" />
-    <property name="ExportApk.BuildVariants" value="debug" />
+    <property name="ExportApk.BuildVariants" value="release" />
     <property name="ExportApk.SignV2" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
@@ -469,7 +517,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="776" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
       <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.20307444" />
@@ -484,10 +531,10 @@
       <window_info anchor="bottom" id="TODO" order="1" />
       <window_info anchor="bottom" id="Terminal" order="2" weight="0.32866043" />
       <window_info anchor="bottom" id="Event Log" order="3" sideWeight="0.50161815" side_tool="true" weight="0.31308413" />
-      <window_info anchor="bottom" id="Build" order="4" sideWeight="0.49919093" weight="0.2071651" />
+      <window_info anchor="bottom" id="Build" order="4" sideWeight="0.49919093" visible="true" weight="0.2071651" />
       <window_info anchor="bottom" id="Run" order="5" weight="0.32866043" />
       <window_info anchor="bottom" id="Logcat" order="6" weight="0.32866043" />
-      <window_info anchor="bottom" id="Android Profiler" order="7" />
+      <window_info anchor="bottom" id="Android Profiler" order="7" weight="0.32866043" />
       <window_info anchor="bottom" id="Debug" order="8" weight="0.32866043" />
       <window_info anchor="bottom" id="Find" order="9" weight="0.32866043" />
       <window_info anchor="right" id="Capture Analysis" order="0" />
@@ -548,6 +595,18 @@
     <MESSAGE value="修复了上个推送中的发现的bug，此次多线程改进，创建缓存和释放线程的进度可以很明显的显示出来" />
     <option name="LAST_COMMIT_MESSAGE" value="修复了上个推送中的发现的bug，此次多线程改进，创建缓存和释放线程的进度可以很明显的显示出来" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/greyCloud/ddos/PageFragment.java</url>
+          <line>289</line>
+          <properties />
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties">
       <provider selected="true" editor-type-id="text-editor">
@@ -557,8 +616,8 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor" />
       <provider editor-type-id="android-manifest" />
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/gradlew.bat">
       <provider selected="true" editor-type-id="text-editor" />
@@ -571,19 +630,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/main_menu.xml" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/greyCloud/ddos/SimpleFragmentPagerAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" selection-start-line="4" selection-end-line="4" selection-end-column="46" />
-          <folding>
-            <element signature="e#570#571#0" expanded="true" />
-            <element signature="e#607#608#0" expanded="true" />
-            <element signature="e#675#676#0" expanded="true" />
-            <element signature="e#715#716#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/greyCloud/ddos/SimpleFragmentPagerAdapter.java" />
     <entry file="file://$PROJECT_DIR$/app/debug/app-debug.apk" />
     <entry file="file://$PROJECT_DIR$/app/debug/output.json" />
     <entry file="file://$PROJECT_DIR$/20180815-151255.png">
@@ -592,33 +639,8 @@
     <entry file="file://$PROJECT_DIR$/20180815-151325.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/greyCloud/ddos/ddos.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="42" column="37" selection-start-line="42" selection-start-column="35" selection-end-line="42" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/main.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="34" selection-start-line="4" selection-start-column="4" selection-end-line="6" selection-end-column="34" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/main.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/greyCloud/ddos/ddos.java" />
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/color.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/greyCloud/ddos/fragment_welcome.java">
@@ -632,75 +654,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/greyCloud/ddos/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="126" column="94" selection-start-line="126" selection-start-column="94" selection-end-line="126" selection-end-column="94" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3580#3928#0" expanded="true" />
-            <element signature="e#3927#3928#0" expanded="true" />
-            <element signature="e#3786#4134#0" expanded="true" />
-            <element signature="e#4133#4134#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-24/java/io/OutputStream.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
+        <state relative-caret-position="1102">
           <caret line="81" selection-start-line="81" selection-end-line="81" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/greyCloud/ddos/fragment_ddos.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1388">
-          <caret line="291" column="38" selection-start-line="291" selection-start-column="38" selection-end-line="291" selection-end-column="38" />
-          <folding>
-            <element signature="e#3025#3326#0" expanded="true" />
-            <element signature="e#3325#3326#0" expanded="true" />
-            <element signature="e#8153#10408#0" expanded="true" />
-            <element signature="e#10407#10408#0" expanded="true" />
-            <element signature="e#12981#14038#0" expanded="true" />
-            <element signature="e#14037#14038#0" expanded="true" />
-            <element signature="e#14702#15553#0" expanded="true" />
-            <element signature="e#15552#15553#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_ddos2.xml">
-      <provider editor-type-id="text-editor" />
-      <provider selected="true" editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_ddos.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="7" column="15" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_welcome.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="17" column="40" lean-forward="true" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/LICENSE">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-798">
-          <caret line="9" column="27" lean-forward="true" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="431">
-          <caret line="29" column="38" selection-start-line="29" selection-start-column="38" selection-end-line="29" selection-end-column="38" />
+        <state relative-caret-position="171">
+          <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
         </state>
       </provider>
     </entry>
@@ -711,10 +675,95 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/main.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="6" column="34" selection-start-line="4" selection-start-column="4" selection-end-line="6" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/main.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_ddos.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="28" column="56" selection-start-line="28" selection-start-column="56" selection-end-line="28" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/greyCloud/ddos/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="167" column="49" selection-start-line="167" selection-start-column="49" selection-end-line="167" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#5383#5541#0" expanded="true" />
+            <element signature="e#5540#5541#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build/outputs/apk/debug/app-debug.apk">
+      <provider selected="true" editor-type-id="apk-viewer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/greyCloud/ddos/PageFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="371" column="53" selection-start-line="371" selection-start-column="53" selection-end-line="371" selection-end-column="53" />
+          <folding>
+            <element signature="e#2102#2103#0" expanded="true" />
+            <element signature="e#2152#2153#0" expanded="true" />
+            <element signature="e#2092#2293#0" expanded="true" />
+            <element signature="e#2292#2293#0" expanded="true" />
+            <element signature="e#2745#3046#0" expanded="true" />
+            <element signature="e#3045#3046#0" expanded="true" />
+            <element signature="e#3269#4438#0" expanded="true" />
+            <element signature="e#4437#4438#0" expanded="true" />
+            <element signature="e#6328#8112#0" expanded="true" />
+            <element signature="e#8111#8112#0" expanded="true" />
+            <element signature="e#8061#10316#0" expanded="true" />
+            <element signature="e#10315#10316#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_welcome.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" column="40" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_ddos2.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build/reports/lint-results-release-fatal.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="5" lean-forward="true" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+        <state relative-caret-position="418">
+          <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
         </state>
       </provider>
     </entry>

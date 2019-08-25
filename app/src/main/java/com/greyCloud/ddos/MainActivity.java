@@ -22,7 +22,6 @@ public class MainActivity extends ActionBarActivity
 	//MyHandler mHandler = new MyHandler();
 
 	//tab选项卡
-	private SimpleFragmentPagerAdapter pagerAdapter;
 	private ViewPager viewPager;
 	private TabLayout tabLayout;
 	private ContentPagerAdapter contentAdapter;
@@ -103,7 +102,7 @@ public class MainActivity extends ActionBarActivity
 			case R.id.about:
 				AlertDialog dialog = new AlertDialog.Builder(this)
 					.setTitle("关于")//设置对话框的标题
-					.setMessage("作者:菜问先生\nQQ:2970046657\n出品:灰色云团队\ngithub:https://github.com/greyCloudTeam/FuckDdos\nEmail:753707290@qq.com(所反馈的bug和建议将在24小时内回复)")//设置对话框的内容
+					.setMessage("作者:菜问先生\nQQ:2970046657\n出品:灰色云团队\ngithub:https://github.com/greyCloudTeam/FuckDdos\nEmail:753707290@qq.com(所反馈的bug和建议将在24小时内回复)\n特别鸣谢:2514228574")//设置对话框的内容
 					//设置对话框的按钮
 					.setPositiveButton("复制github地址", new DialogInterface.OnClickListener() {
 						@Override
@@ -137,7 +136,25 @@ public class MainActivity extends ActionBarActivity
 			case R.id.updata:
 				AlertDialog dialog1=new AlertDialog.Builder(this)
 					.setTitle("关于")//设置对话框的标题
-					.setMessage("1.4更新内容:\n修复了所有bug\n直接强制停止所有线程，方便快捷\n代码优化，更省资源\n总死亡线程数量不再统计，直接统计每秒死多少线程\n点击开始攻击时不再卡死\n\n1.4_fix1修复内容:\n修复了点击开始攻击后出现警告弹窗，然后再次点击开始攻击显示正在攻击，然后再点击停止攻击直接闪退\n改了下代码，应该能缓解存活线程统计有误差\n修复了停止攻击后再点击开始攻击，存活线程不动的bug\n优化了部分ui")
+					.setMessage("1.5更新内容:\n"+
+							"1.前面几个版本都是作者拿手机的aide编写的（电脑运行不起来），这次向朋友借来了电脑。项目的配置文件经过修改已经能顺利在当前的androidStudio上编译，并且代码进行优化，加强了可读性，添加了注释\n"+
+							"2.上个版本所修复的存活线程数量的统计问题并没有真正修复，经过作者对java进一步学习，此版本已经修复\n"+
+							"3.ui重写，将主题色改为绿油油的原谅色\n"+
+							"4.修复了释放线程和创建缓存以及回收线程时进度条显示不出来的问题\n"+
+							"5.代码重写，代码要比前几个版本更加简洁\n"+
+							"6.新增了使用移动数据的提醒，关于处增加了复制github地址和复制email地址\n\n"+
+							"1.4_fix1修复内容:\n" +
+							"修复了点击开始攻击后出现警告弹窗，然后再次点击开始攻击显示正在攻击，然后再点击停止攻击直接闪退\n" +
+							"改了下代码，应该能缓解存活线程统计有误差\n" +
+							"修复了停止攻击后再点击开始攻击，存活线程不动的bug\n" +
+							"优化了部分ui\n\n"+
+							"1.4更新内容:\n" +
+							"修复了所有bug\n" +
+							"直接强制停止所有线程，方便快捷\n" +
+							"代码优化，更省资源\n" +
+							"总死亡线程数量不再统计，直接统计每秒死多少线程\n" +
+							"点击开始攻击时不再卡死"
+							)
 					//设置对话框的按钮
 					.setNegativeButton("确定", new DialogInterface.OnClickListener() {
 						@Override

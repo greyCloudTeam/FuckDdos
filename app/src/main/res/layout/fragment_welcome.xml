@@ -36,9 +36,25 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="注意"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                    android:textColor="@color/md_blue_900_color_code" />
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="本次版本使用了很多作者以前未尝试过的代码，所以稳定性可能没前几个版本好，不过我们是测试过的，没有什么大问题。如果遇到bug请及时汇报！！！！！通过邮箱方式，邮箱在右上角菜单的关于界面里，一般24小时内就可以得到回复。有bug和建议一定要反馈！！！！！"
+                    android:textColor="@color/md_blue_900_color_code" />
+
+                <TextView
                     android:id="@+id/textView6"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
                     android:text="使用方法"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 

@@ -996,6 +996,8 @@ id text2
 id textSpacerNoButtons
 id textView
 id textView10
+id textView11
+id textView12
 id textView2
 id textView3
 id textView4

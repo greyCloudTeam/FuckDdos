@@ -50,24 +50,6 @@ public class PageFragment extends Fragment {
     AlertDialog Warningdialog;//警告的对话框，定义一个环保
     public static ProgressDialog progress;
 
-    /*
-    ProgressDialog pd;
-
-
-
-    boolean lock=false;
-    Handler uiHandler = new Handler();
-
-    Thread1[] threadPool=null;
-
-    boolean stop=true;
-    public static int buffSize=0;
-    public static int tN=0;
-    String err="";
-    int jd=0;
-    ProgressDialog pd1;
-     */
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -116,16 +98,31 @@ public class PageFragment extends Fragment {
                 }
                 //发起暂停命令前我们设置一下progress
                 progress.setMessage("正在回收线程");
-                progress.setMax(alive);
+
                 progress.setProgress(0);//归位
                 while(PageFragment.progress.getProgress()!=0){
                     progress.setProgress(0);//归位
                 }
                 progress.show();
-                Log.println(Log.WARN,"progress","alive!"+PageFragment.alive+"progress!"+PageFragment.progress.getProgress());
+                synchronized (PageFragment.lock){
+                    isStart=false;//归位,全体线程立马关闭！！！！！
+                    if(alive==0){
+                        ((LinearLayout) getView().findViewById(R.id.infoLayout)).setVisibility(View.GONE);//隐藏回去
+                        progress.dismiss();
 
-                isStart=false;//归位,全体线程立马关闭！！！！！
-                ((LinearLayout) getView().findViewById(R.id.infoLayout)).setVisibility(View.GONE);//隐藏回去
+                        lock.notifyAll();
+                        return;
+                    }
+                    progress.setMax(alive);
+
+                    Log.println(Log.WARN,"progress","alive!"+PageFragment.alive+"progress!"+PageFragment.progress.getProgress());
+                    ((LinearLayout) getView().findViewById(R.id.infoLayout)).setVisibility(View.GONE);//隐藏回去
+                    lock.notifyAll();
+                }
+
+
+
+
             }
         });
         btn_start.setOnClickListener(new View.OnClickListener() {//开始事件
@@ -334,8 +331,9 @@ class thread_ddos extends Thread{//ddos线程
                                 PageFragment.progress.setProgress(PageFragment.progress.getProgress()+1);
                                 Log.println(Log.WARN,"thread","alive!"+PageFragment.alive+"progress!"+PageFragment.progress.getProgress());
                                 //最后一个线程擦屁股
-                                if(PageFragment.progress.getProgress()==PageFragment.alive){
+                                if(PageFragment.progress.getProgress()>=PageFragment.alive){
                                     PageFragment.progress.dismiss();
+                                    PageFragment.alive=0;
                                     //Log.println(Log.WARN,"thread","alive!"+PageFragment.alive+"progress!"+PageFragment.progress.getProgress());
                                     //PageFragment.lock.notifyAll();
                                 }
@@ -369,8 +367,9 @@ class thread_ddos extends Thread{//ddos线程
                             PageFragment.progress.setProgress(PageFragment.progress.getProgress()+1);
                             //最后一个线程擦屁股
                             Log.println(Log.WARN,"thread","alive!"+PageFragment.alive+"progress!"+PageFragment.progress.getProgress());
-                            if(PageFragment.progress.getProgress()==PageFragment.alive){
+                            if(PageFragment.progress.getProgress()>=PageFragment.alive){
                                 PageFragment.progress.dismiss();
+                                PageFragment.alive=0;
                                 //PageFragment.lock.notifyAll();
                             }
                         //}
